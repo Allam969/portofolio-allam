@@ -27,7 +27,7 @@ html {
 
 body {
   background-color: var(--bg);
-     background-image: url('Aset/bg.jpg.jpeg');
+     background-image: url('bg.jpg.jpeg');
      background-size: cover;
      background-attachment: fixed;
      background-position: center;
