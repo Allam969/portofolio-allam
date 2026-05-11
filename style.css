@@ -1,0 +1,463 @@
+/* =============================================
+   PORTFOLIO - Ahmad Allam Mubarok
+   style.css
+   ============================================= */
+
+/* ─── RESET ─── */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg: #0d0d0d;
+  --surface: rgba(0, 0, 0, 0.65);
+  --surface-solid: #1a1a1a;
+  --border: rgba(255, 255, 255, 0.12);
+  --text: #ffffff;
+  --text-soft: #b0b0b0;
+  --accent: #007bff;
+  --accent-hover: #0056b3;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg);
+     background-image: url('Aset/bg.jpg.jpeg');
+     background-size: cover;
+     background-attachment: fixed;
+     background-position: center;
+  color: var(--text);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+/* ─── NAVBAR ─── */
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--border);
+}
+
+.nav-brand {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--text-soft);
+  font-size: 0.88rem;
+  transition: color 0.2s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: var(--accent);
+}
+
+/* ─── HERO ─── */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 6rem 2rem 3rem;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.hero-label {
+  font-size: 0.9rem;
+  color: var(--text-soft);
+  margin-bottom: 1rem;
+}
+
+.hero-title {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 2rem;
+}
+
+.hero-title span {
+  color: var(--accent);
+}
+
+/* ─── PREVIEW SECTION (index) ─── */
+.preview-section {
+  padding: 3rem 20px 4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.about-preview-grid {
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
+}
+
+/* ─── SECTION BOX ─── */
+.section-box {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 20px;
+  backdrop-filter: blur(6px);
+}
+
+.section-box h2 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.section-box ul {
+  list-style: disc;
+  padding-left: 1.5rem;
+}
+
+.section-box ul li {
+  margin-bottom: 6px;
+  color: var(--text-soft);
+}
+
+.section-box p {
+  color: var(--text-soft);
+  margin-bottom: 0.5rem;
+  line-height: 1.7;
+}
+
+/* ─── FOTO ─── */
+.foto-placeholder {
+  width: 120px;
+  height: 160px;
+  min-width: 120px;
+  background: rgba(255,255,255,0.08);
+  border: 2px dashed var(--border);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  color: var(--text-soft);
+  text-align: center;
+  padding: 0.5rem;
+}
+
+.foto-placeholder.large {
+  width: 180px;
+  height: 240px;
+  min-width: 180px;
+}
+
+/* Ini styling untuk kalau sudah pakai foto asli */
+.foto-diri {
+  width: 180px;
+  height: 240px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* ─── PAGE WRAPPER ─── */
+.page-wrapper {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 6rem 20px 4rem;
+}
+
+.page-header {
+  margin-bottom: 2rem;
+}
+
+.page-title {
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  font-weight: 700;
+}
+
+/* ─── ABOUT PAGE ─── */
+.about-grid {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+.about-detail h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.75rem;
+}
+
+.about-detail p {
+  color: var(--text-soft);
+  margin-bottom: 1.25rem;
+  line-height: 1.75;
+}
+
+.info-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 0.5rem;
+}
+
+.info-table tr {
+  border-bottom: 1px solid var(--border);
+}
+
+.info-table td {
+  padding: 8px 6px;
+  font-size: 0.9rem;
+  color: var(--text-soft);
+}
+
+.info-key {
+  font-weight: 600;
+  color: var(--text) !important;
+  width: 120px;
+  white-space: nowrap;
+}
+
+/* ─── PENGALAMAN ─── */
+.btn-kembali {
+  display: inline-block;
+  color: var(--accent);
+  text-decoration: none;
+  font-size: 0.88rem;
+  margin-bottom: 1.5rem;
+  transition: color 0.2s;
+}
+
+.btn-kembali:hover {
+  color: var(--accent-hover);
+}
+
+.exp-item {
+  margin-bottom: 2rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.exp-item:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.exp-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.exp-head h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 0.2rem;
+}
+
+.exp-role {
+  font-style: italic;
+  color: var(--text-soft);
+  font-size: 0.88rem;
+}
+
+.exp-date {
+  font-size: 0.82rem;
+  color: var(--text-soft);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.exp-item p {
+  font-size: 0.88rem;
+  color: var(--text-soft);
+  margin-bottom: 0.5rem;
+}
+
+.exp-item ul {
+  list-style: disc;
+  padding-left: 1.5rem;
+}
+
+.exp-item ul li {
+  font-size: 0.88rem;
+  color: var(--text-soft);
+  margin-bottom: 6px;
+  line-height: 1.5;
+}
+
+/* ─── CONTACT ─── */
+.contact-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.contact-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.contact-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  text-decoration: none;
+  color: var(--text);
+  background: rgba(255,255,255,0.05);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 0.9rem 1.1rem;
+  transition: border-color 0.2s, background 0.2s;
+}
+
+.contact-card:hover {
+  border-color: var(--accent);
+  background: rgba(0, 123, 255, 0.08);
+}
+
+.contact-icon {
+  font-size: 1.3rem;
+  flex-shrink: 0;
+}
+
+.contact-card small {
+  display: block;
+  font-size: 0.7rem;
+  color: var(--text-soft);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 0.15rem;
+}
+
+.contact-card strong {
+  font-size: 0.88rem;
+}
+
+/* ─── FORM ─── */
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-group label {
+  display: block;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--text-soft);
+  margin-bottom: 0.4rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 0.7rem 1rem;
+  border: 1px solid var(--border);
+  border-radius: 5px;
+  background: rgba(255,255,255,0.05);
+  color: var(--text);
+  font-family: Arial, sans-serif;
+  font-size: 0.9rem;
+  resize: vertical;
+  transition: border-color 0.2s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+
+/* ─── BUTTONS ─── */
+button,
+.btn-primary {
+  background-color: var(--accent);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.2s;
+  font-family: Arial, sans-serif;
+}
+
+button:hover,
+.btn-primary:hover {
+  background-color: var(--accent-hover);
+}
+
+/* ─── FOOTER ─── */
+footer {
+  border-top: 1px solid var(--border);
+  padding: 1.5rem 20px;
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--text-soft);
+  background: rgba(0,0,0,0.4);
+  margin-top: 3rem;
+}
+
+/* ─── RESPONSIVE ─── */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 0.75rem 1rem;
+  }
+  .nav-links {
+    gap: 1rem;
+  }
+  .hero {
+    padding: 8rem 1.5rem 3rem;
+  }
+  .about-preview-grid,
+  .about-grid {
+    flex-direction: column;
+  }
+  .foto-placeholder,
+  .foto-placeholder.large,
+  .foto-diri {
+    width: 100%;
+    height: 200px;
+    min-width: unset;
+  }
+  .contact-layout {
+    grid-template-columns: 1fr;
+  }
+  .exp-head {
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact - Ahmad Allam Mubarok</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <nav>
+    <div class="nav-brand">Ahmad Allam Mubarok &nbsp;·&nbsp; 140910250090</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="pengalaman.html">Pengalaman</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="page-wrapper">
+    <div class="page-header">
+      <h2 class="page-title">Hubungi Saya 🤝</h2>
+      <p style="color:var(--text-soft); margin-top:0.5rem;">
+        Jangan ragu untuk menghubungi saya melalui kontak berikut!
+      </p>
+    </div>
+
+    <div class="contact-layout">
+
+      <div class="section-box">
+        <h2>Kontak</h2>
+        <div class="contact-links">
+          <a href="mailto:ahmad25042@mail.unpad.ac.id" class="contact-card">
+            <span class="contact-icon">✉️</span>
+            <div>
+              <small>Email</small>
+              <strong>ahmad25042@mail.unpad.ac.id</strong>
+            </div>
+          </a>
+          <a href="https://wa.me/6281218458969" class="contact-card" target="_blank">
+            <span class="contact-icon">📱</span>
+            <div>
+              <small>WhatsApp</small>
+              <strong>081218458969</strong>
+            </div>
+          </a>
+          <a href="https://instagram.com/zeiszz7_" class="contact-card" target="_blank">
+            <span class="contact-icon">📸</span>
+            <div>
+              <small>Instagram</small>
+              <strong>@zeiszz7_</strong>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <div class="section-box">
+        <h2>Kirim Pesan</h2>
+        <div class="form-group">
+          <label>Nama</label>
+          <input type="text" id="inputNama" placeholder="Nama kamu..." />
+        </div>
+        <div class="form-group">
+          <label>Email</label>
+          <input type="email" id="inputEmail" placeholder="email@example.com" />
+        </div>
+        <div class="form-group">
+          <label>Pesan</label>
+          <textarea id="inputPesan" rows="4" placeholder="Tulis pesanmu di sini..."></textarea>
+        </div>
+        <button class="btn-primary" onclick="kirimPesan()">Kirim Pesan ✉️</button>
+      </div>
+
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2026 Ahmad Allam Mubarok · Teknik Elektro · Universitas Padjadjaran</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
